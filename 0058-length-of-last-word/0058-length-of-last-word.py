@@ -1,5 +1,11 @@
 class Solution:
-    def lengthOfLastWord(self, s: str) -> int:
-        s = s.strip()  # remove leading and trailing spaces
-        words = s.split()  # split the string into words
-        return len(words[-1])  # return the length of the last word
+  def lengthOfLastWord(self, s: str) -> int:
+    i = len(s) - 1
+
+    while i >= 0 and s[i] == ' ':
+      i -= 1
+    lastIndex = i
+    while i >= 0 and s[i] != ' ':
+      i -= 1
+
+    return lastIndex - i
