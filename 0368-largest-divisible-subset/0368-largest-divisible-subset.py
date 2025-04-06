@@ -1,5 +1,5 @@
 class Solution:
-  def largestDivisibleSubset(self, nums: List[int]) -> List[int]:
+  def largestDivisibleSubset(self, nums: list[int]) -> list[int]:
     n = len(nums)
     ans = []
     count = [1] * n
